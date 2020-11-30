@@ -5,6 +5,10 @@
 const AWS = require('aws-sdk');
 const uuid = require('uuid');
 
+/**
+ * credencial configuration
+ */
+
 const credentials = new AWS.SharedIniFileCredentials({ profile: 'node' });
 AWS.config.credentials = credentials;
 
