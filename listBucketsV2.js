@@ -2,20 +2,19 @@
  * load the sdk and UUID
  */
 
-import { SharedIniFileCredentials, config } from 'aws-sdk';
-import {Buckets } from 'aws-sdk/clients/s3';
+// import { SharedIniFileCredentials } from 'aws-sdk';
+import AWS from 'aws-sdk';
 /**
  * credencial configuration
  */
 
-const credentials = new SharedIniFileCredentials({ profile: 'node' });
-config.credentials = credentials;
-
+const credentials = new AWS.SharedIniFileCredentials({ profile: 'node' });
+AWS.config.credentials = credentials;
 
 /**
  * Create a S3 Service Object
  */
-let bucketPromise = new S3({ apiVersion: '2020-11-30' });
+let bucketPromise = new AWS.S3({ apiVersion: '2020-11-30' });
 /**
  * Call S3 to list buckets
  */
