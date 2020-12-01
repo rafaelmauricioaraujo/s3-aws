@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <p>Buckets</p>
+  <div>
+    <ul>
+      <% for(let i=0; i<buckets.length; i++) {%>
+      <li>Name: <%= buckets[i].Name %></li>
+      <li>Creation Date: <%= buckets[i].CreationDate %></li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+
 </html>
