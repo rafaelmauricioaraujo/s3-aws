@@ -1,0 +1,11 @@
+[
+    {
+        "name":"rafael mauricio araujo",
+        "address":"rua ciro monteiro, 249 302 C",
+        "cep":"60822285",
+        "education":{
+            "01":"economic science",
+            "02":"programming"
+        }
+    }
+]
