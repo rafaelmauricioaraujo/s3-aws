@@ -11,12 +11,23 @@
   <p>Welcome to <%= title %></p>
   <p>Buckets</p>
   <div>
-    <ul>
-      <% for(let i=0; i<buckets.length; i++) {%>
-      <li>Name: <%= buckets[i].Name %></li>
-      <li>Creation Date: <%= buckets[i].CreationDate %></li>
-      <% } %>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Create Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i = 0; i<buckets.length; i++) {%>
+        <tr>
+          <td><%= buckets[i].Name %></td>
+          <td><%= buckets[i].CreationDate %></td>
+          <td><a>Detalhes</a></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
   </div>
 </body>
 
